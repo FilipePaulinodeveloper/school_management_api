@@ -15,13 +15,14 @@ return new class extends Migration
     {
         Schema::create('cursos', function(Blueprint $table){
             $table->id();            
-            $table->string('foto_curso', 100);
+            $table->string('foto_curso', 100)->nullable();
             $table->string('nome', 45);
             $table->string('carga_horaria',20);
             $table->decimal('preco', $precicion = 6 , $scale = 3);
             $table->tinyInteger('nivel');
             $table->tinyInteger('prerequisitos');
-            $table->string('description');            
+            $table->string('description');              
+            $table->boolean('status')->nullable();
         });
     }
 

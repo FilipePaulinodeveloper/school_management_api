@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('alunos', function (Blueprint $table) {
             
-            $table->bigIncrements('id');
-            $table->string('nome', 40);
+            $table->id();
+            $table->string('nome', 40)->unique();
             $table->string('sexo', 1);
             $table->date('data_nascimento');
             $table->string('numero_contato', 20);
@@ -25,13 +25,14 @@ return new class extends Migration
             $table->string('cpf', 14);
             $table->string('nome_mae', 40);
             $table->string('nome_pai', 40);
-            $table->string('foto_aluno', 100);
+            $table->string('foto_aluno', 100)->nullable();
             $table->string('cep', 10);
             $table->string('rua', 45);
             $table->string('estado', 2);
-            $table->string('cemplemento', 40);
+            $table->string('cemplemento', 40)->nullable();
             $table->smallInteger('numero_residencia');
-            $table->string('cidade', 45);            
+            $table->string('cidade', 45);  
+            $table->boolean('status')->nullable();
         });
     }
 

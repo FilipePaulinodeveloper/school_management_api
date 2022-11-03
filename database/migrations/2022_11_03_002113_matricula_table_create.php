@@ -17,7 +17,7 @@ return new class extends Migration
             $table->foreignId('turma_id')->constrained('turmas');            
             $table->foreignId('aluno_id')->constrained('alunos');
             $table->decimal('preco_curso', $precicion = 6 , $scale = 3);
-            $table->decimal('desconto', $precicion = 6 , $scale = 3);
+            $table->decimal('desconto', $precicion = 6 , $scale = 3)->nullable();
             $table->decimal('valor_final', $precicion = 6 , $scale = 3);
             $table->tinyInteger('qtd_parcelas');
 

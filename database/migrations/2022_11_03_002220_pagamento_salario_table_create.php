@@ -19,8 +19,8 @@ return new class extends Migration
             $table->foreignId('professor_id')->constrained('professores');
             $table->decimal('valor_salario', $precicion = 6 , $scale = 3);
             $table->date('data_pagamento');
-            $table->date('data_pago');
-            $table->tinyInteger('forma_pagamento');
+            $table->date('data_pago')->nullable();
+            $table->tinyInteger('forma_pagamento')->nullable();
 
         });
     }

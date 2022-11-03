@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('parcelas' , function (Blueprint $table) {
             $table->id();
             $table->decimal('valor_parcelas', $precicion= 6 , $scale = 3);
-            $table->date('data_pagamento');
+            $table->date('data_pagamento')->nullable();
             $table->date('data_vencimento');
             $table->tinyInteger('num_parcelas');
             $table->foreignId('matricula_turma_id')->constrained('turmas');

@@ -20,7 +20,7 @@ return new class extends Migration
             $table->tinyInteger('modalidade');
             $table->date('inicio_aulas');
             $table->date('termino_aulas');
-            $table->boolean('status');           
+            $table->boolean('status')->nullable();           
             
             $table->foreignId('professor_id')->constrained('professores');
             $table->foreignId('curso_id')->constrained('cursos');
@@ -28,7 +28,7 @@ return new class extends Migration
             $table->decimal('preco_curso', $precicion = 6 , $scale = 3);
             $table->tinyInteger('dia_aula');
             $table->tinyInteger('qtd_aulas');
-            $table->tinyInteger('qtd_aulas_assistidas');
+            $table->tinyInteger('qtd_aulas_assistidas')->nullable();
             $table->tinyInteger('turno_aulas');
             $table->time('horaio_aula');      
 
