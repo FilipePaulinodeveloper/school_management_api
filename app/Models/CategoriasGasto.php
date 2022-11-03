@@ -8,4 +8,20 @@ use Illuminate\Database\Eloquent\Model;
 class CategoriasGasto extends Model
 {
     use HasFactory;
+    public $timestamps = false;
+    protected $table = 'categoria_do_gasto';
+
+    protected $fillable = [        
+        'categoria', 
+    ];
+
+    public function gastos()
+    {
+        return $this->hasMany(Gastos::class);
+    }
+    public function subcategoria()
+    {
+        return $this->hasMany(Subcategoria::class);
+    }
+
 }

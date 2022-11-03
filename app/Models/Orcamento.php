@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Orcamento extends Model
 {
     use HasFactory;
+    public $timestamps = false;
+    protected $table = 'orcamento';
+
+    protected $fillable = [
+        'valor',
+        'ano'
+    ];
+
 }

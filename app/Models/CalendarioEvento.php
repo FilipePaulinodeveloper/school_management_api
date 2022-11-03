@@ -8,4 +8,17 @@ use Illuminate\Database\Eloquent\Model;
 class CalendarioEvento extends Model
 {
     use HasFactory;
+    public $timestamps = false;
+    protected $table = 'calendario_eventos';
+
+    protected $fillable = [
+        'titulo_envent',
+        'categoria',
+        'data_inicio',
+        'data_termino',
+        'dia_todo',
+        'descricao',
+        'link'
+    ];
+
 }
