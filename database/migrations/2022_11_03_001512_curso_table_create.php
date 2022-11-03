@@ -13,7 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('cursos', function(Blueprint $table){
+            $table->id();            
+            $table->string('foto_curso', 100);
+            $table->string('nome', 45);
+            $table->string('carga_horaria',20);
+            $table->decimal('preco', $precicion = 6 , $scale = 3);
+            $table->tinyInteger('nivel');
+            $table->tinyInteger('prerequisitos');
+            $table->string('description');            
+        });
     }
 
     /**
@@ -23,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('cursos');
     }
 };

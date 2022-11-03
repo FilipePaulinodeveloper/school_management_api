@@ -13,7 +13,26 @@ return new class extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('turmas', function (Blueprint $table) {
+
+            $table->id();
+            $table->string('nome', 40);
+            $table->tinyInteger('modalidade');
+            $table->date('inicio_aulas');
+            $table->date('termino_aulas');
+            $table->boolean('status');           
+            
+            $table->foreignId('professor_id')->constrained('professores');
+            $table->foreignId('curso_id')->constrained('cursos');
+
+            $table->decimal('preco_curso', $precicion = 6 , $scale = 3);
+            $table->tinyInteger('dia_aula');
+            $table->tinyInteger('qtd_aulas');
+            $table->tinyInteger('qtd_aulas_assistidas');
+            $table->tinyInteger('turno_aulas');
+            $table->time('horaio_aula');      
+
+        });
     }
 
     /**
@@ -23,6 +42,6 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('turmas');
     }
 };
