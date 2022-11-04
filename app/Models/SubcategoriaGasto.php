@@ -18,6 +18,6 @@ class SubcategoriaGasto extends Model
 
     public function categoria()
     {
-        return $this->belongsToMany(categoria::class);
+        return $this->belongsTo(categoria::class);
     }
 }

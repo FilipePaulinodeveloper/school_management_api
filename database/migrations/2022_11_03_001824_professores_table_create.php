@@ -35,7 +35,7 @@ return new class extends Migration
             $table->string('local_formacao', 45)->nullable();        
             $table->string('tempo_esperiencia', 10)->nullable();
             $table->string('local_trabalho', 45)->nullable();        
-            $table->text('descricap-academica', 500)->nullable();
+            $table->text('descricao-academica', 500)->nullable();
             $table->boolean('status')->nullable();
             $table->tinyInteger('tipo_conta')->nullable();
             $table->tinyInteger('banco')->nullable();

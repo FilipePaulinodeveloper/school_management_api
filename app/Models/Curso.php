@@ -8,4 +8,25 @@ use Illuminate\Database\Eloquent\Model;
 class Curso extends Model
 {
     use HasFactory;
+    public $timestamps = false;
+    protected $table = 'curso';
+
+    private $fillable = [
+        'foto_curso',
+        'nome',
+        'carga_horaria', 
+        'preco',
+        'nivel',
+        'prerequisitos',
+        'description',
+        'status'
+    ];
+
+    public function turmas() 
+    {
+        return $this->hasMany(Turma::class);
+    }
+
+
+
 }
