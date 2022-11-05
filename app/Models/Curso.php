@@ -11,7 +11,7 @@ class Curso extends Model
     public $timestamps = false;
     protected $table = 'curso';
 
-    private $fillable = [
+    protected $fillable = [
         'foto_curso',
         'nome',
         'carga_horaria', 

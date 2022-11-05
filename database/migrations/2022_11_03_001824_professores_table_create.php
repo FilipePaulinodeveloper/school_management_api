@@ -22,9 +22,7 @@ return new class extends Migration
             $table->string('email', 100);
             $table->string('rg',14);
             $table->string('cpf', 14);
-            $table->string('foto_professor', 100)->nullable();
-            $table->string('nome_mae', 40);
-            $table->string('nome_pai', 40);
+            $table->string('foto_professor', 100)->nullable();           
             $table->string('cep', 10);
             $table->string('rua', 45);
             $table->string('estado', 2);

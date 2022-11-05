@@ -1,4 +1,4 @@
-<?php
+protected $model = Comentario::class;<?php
 
 namespace Database\Factories;
 
