@@ -11,7 +11,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 class CalendarioEventoFactory extends Factory
 {      
 
-    protected $model = CalendarioEvento ::class;
+    protected $model = CalendarioEvento::class;
     /**
      * Define the model's default state.
      *
