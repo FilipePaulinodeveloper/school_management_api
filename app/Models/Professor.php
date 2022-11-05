@@ -8,8 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Professor extends Model
 {
     use HasFactory;
-    public $timestamps = false;
-    protected $table = 'professor';
+    public $timestamps = false;    
 
     protected $fillable = [
         'nome',
@@ -44,7 +43,7 @@ class Professor extends Model
         return $this->hasMany(Turma::class);
     }
 
-    public function pagamentoSalario()
+    public function salarios()
     {
         return $this->hasMany(PagamentoSalarioProfessor::class);
     }

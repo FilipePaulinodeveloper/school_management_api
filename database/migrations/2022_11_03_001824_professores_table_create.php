@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('professores', function (Blueprint $table) {           
             $table->id();
-            $table->string('nome', 40);
+            $table->string('nome', 45);
             $table->string('sexo', 1);
             $table->date('data_nascimento');
             $table->string('numero_contato', 25);
@@ -39,10 +39,7 @@ return new class extends Migration
             $table->tinyInteger('banco')->nullable();
             $table->tinyInteger('tipo_chave_pix')->nullable();
             $table->string('chave_pix', 50)->nullable();
-            $table->string('agencia', 45)->nullable();
-
-
-
+            $table->string('agencia', 6)->nullable();
       
         });
     }
