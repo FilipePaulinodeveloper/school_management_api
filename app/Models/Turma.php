@@ -19,12 +19,10 @@ class Turma extends Model
         'status',
         'professor_id',
         'curso_id',
-        'preco_curso',
-        'dia_aula',
+        'preco_curso',        
         'qtd_aulas',
         'qtd_aulas_assistidas',
-        'turno_aulas',
-        'horaio_aula',
+        'turno_aulas',        
     ];
 
     

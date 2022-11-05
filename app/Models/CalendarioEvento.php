@@ -12,7 +12,7 @@ class CalendarioEvento extends Model
     protected $table = 'calendario_eventos';
 
     protected $fillable = [
-        'titulo_envent',
+        'titulo_envento',
         'categoria',
         'data_inicio',
         'data_termino',

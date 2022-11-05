@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('categoria_do_gasto', function (Blueprint $table){
             $table->id();
-            $table->string('categoria' , 45);
+            $table->string('nome_categoria' , 45);
         });
     }
 

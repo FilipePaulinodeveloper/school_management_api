@@ -12,7 +12,7 @@ class SubcategoriaGasto extends Model
     protected $table = 'subcategoria';
 
     protected $fillable = [
-        'subcategoria',
+        'nome_subcategoria',
         'categoria_id',      
     ];
 

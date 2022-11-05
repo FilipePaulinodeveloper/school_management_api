@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('nome', 40);
             $table->string('sexo', 1);
             $table->date('data_nascimento');
-            $table->string('numero_contato', 20);
+            $table->string('numero_contato', 25);
             $table->string('email', 100);
             $table->string('rg',14);
             $table->string('cpf', 14);
@@ -26,12 +26,12 @@ return new class extends Migration
             $table->string('cep', 10);
             $table->string('rua', 45);
             $table->string('estado', 2);
-            $table->string('cemplemento', 40)->nullable();
+            $table->string('cemplemento', 45)->nullable();
             $table->smallInteger('numero_residencia');
             $table->string('cidade', 45);    
             $table->string('curso_formacao', 45);     
             $table->string('local_formacao', 45)->nullable();        
-            $table->string('tempo_esperiencia', 10)->nullable();
+            $table->string('tempo_experiencia', 10)->nullable();
             $table->string('local_trabalho', 45)->nullable();        
             $table->text('descricao-academica', 500)->nullable();
             $table->boolean('status')->nullable();

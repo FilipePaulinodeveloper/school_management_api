@@ -21,7 +21,7 @@ return new class extends Migration
             $table->decimal('preco', $precicion = 6 , $scale = 3);
             $table->tinyInteger('nivel');
             $table->tinyInteger('prerequisitos');
-            $table->string('description');              
+            $table->text('description');              
             $table->boolean('status')->nullable();
         });
     }

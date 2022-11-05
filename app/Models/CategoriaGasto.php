@@ -12,7 +12,7 @@ class CategoriasGasto extends Model
     protected $table = 'categoria_do_gasto';
 
     protected $fillable = [        
-        'categoria', 
+        'nome_categoria', 
     ];
 
     public function gastos()

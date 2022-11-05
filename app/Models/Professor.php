@@ -28,7 +28,7 @@ class Professor extends Model
         'cidade',
         'curso_formacao',
         'local_formacao',
-        'tempo_esperiencia',
+        'tempo_experiencia',
         'local_trabalho',
         'descricao-academica',
         'status',

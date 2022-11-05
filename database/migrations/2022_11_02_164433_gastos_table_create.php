@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('gastos', function (Blueprint $table){
             $table->id();
-            $table->string('gasto', 45);
+            $table->string('nome_gasto', 45);
             $table->decimal('valor', $precicion = 6 , $scale = 3);
             $table->date('data_vencimento')->nullable();
             $table->date('data_pagamento')->nullable();            

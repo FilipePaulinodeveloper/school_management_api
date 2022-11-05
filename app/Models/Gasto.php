@@ -12,7 +12,7 @@ class Gastos extends Model
     protected $table = 'gastos';
 
     protected $fillable = [
-        'gasto',
+        'nome_gasto',
         'valor',
         'data_vencimento',
         'data_pagamento',

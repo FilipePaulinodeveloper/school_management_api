@@ -25,12 +25,10 @@ return new class extends Migration
             $table->foreignId('professor_id')->constrained('professores');
             $table->foreignId('curso_id')->constrained('cursos');
 
-            $table->decimal('preco_curso', $precicion = 6 , $scale = 3);
-            $table->tinyInteger('dia_aula');
+            $table->decimal('preco_curso', $precicion = 6 , $scale = 3);            
             $table->tinyInteger('qtd_aulas');
             $table->tinyInteger('qtd_aulas_assistidas')->nullable();
-            $table->tinyInteger('turno_aulas');
-            $table->time('horaio_aula');      
+            $table->tinyInteger('turno_aulas');            
 
         });
     }

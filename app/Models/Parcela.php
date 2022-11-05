@@ -12,7 +12,7 @@ class Parcelas extends Model
     protected $table = 'parcelas';
 
     protected $fillable = [
-       'valor_parcelas',
+       'valor_parcela',
        'data_pagamento',
        'data_vencimento',       
        'num_parcelas',
