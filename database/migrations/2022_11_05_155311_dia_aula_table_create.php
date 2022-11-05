@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('dia_aula', function(Blueprint $table){
             $table->foreignId('turma_id')->constrained('turmas');
-            $table->time('di');
+            $table->time('dia');
             $table->string('horario_aula',14);
         });
     }
