@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('pagamento_salario_professor', function (Blueprint $table){
             
             $table->id();
-            $table->foreignId('professor_id')->constrained('professores');
+            $table->foreignId('professor_id')->constrained('professores')->onUpdate('cascade')->onDelete('cascade');
             $table->decimal('valor_salario', $precicion = 6 , $scale = 3);
             $table->date('data_pagamento');
             $table->date('data_pago')->nullable();

@@ -22,8 +22,8 @@ return new class extends Migration
             $table->date('termino_aulas');
             $table->boolean('status')->nullable();           
             
-            $table->foreignId('professor_id')->constrained('professores');
-            $table->foreignId('curso_id')->constrained('cursos');
+            $table->foreignId('professor_id')->constrained('professores')->onUpdate('cascade')->onDelete('cascade');;
+            $table->foreignId('curso_id')->constrained('cursos')->onUpdate('cascade')->onDelete('cascade');;
 
             $table->decimal('preco_curso', $precicion = 6 , $scale = 3);            
             $table->tinyInteger('qtd_aulas');

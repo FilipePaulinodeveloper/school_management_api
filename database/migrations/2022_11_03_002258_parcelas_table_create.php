@@ -19,7 +19,7 @@ return new class extends Migration
             $table->date('data_pagamento')->nullable();
             $table->date('data_vencimento');
             $table->tinyInteger('num_parcelas');            
-            $table->foreignId('matricula_id')->constrained('matricula');         
+            $table->foreignId('matricula_id')->constrained('matricula')->onUpdate('cascade')->onDelete('cascade');         
         });
     }
 

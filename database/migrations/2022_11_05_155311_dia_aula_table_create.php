@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('dia_aula', function(Blueprint $table){
-            $table->foreignId('turma_id')->constrained('turmas');
+            $table->foreignId('turma_id')->constrained('turmas')->onUpdate('cascade')->onDelete('cascade');
             $table->time('dia');
             $table->string('horario_aula',14);
         });
