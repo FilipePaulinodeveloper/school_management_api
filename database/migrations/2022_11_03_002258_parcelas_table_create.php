@@ -18,9 +18,8 @@ return new class extends Migration
             $table->decimal('valor_parcela', $precicion= 6 , $scale = 3);
             $table->date('data_pagamento')->nullable();
             $table->date('data_vencimento');
-            $table->tinyInteger('num_parcelas');
-            $table->foreignId('matricula_turma_id')->constrained('matricula');
-            $table->foreignId('matricula_aluno_id')->constrained('alunos');
+            $table->tinyInteger('num_parcelas');            
+            $table->foreignId('matricula_id')->constrained('matricula');         
         });
     }
 
