@@ -17,8 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('titulo_envento', 45);
             $table->string('categoria', 1);
-            $table->date('data_inicio');
-            $table->date('data_termino')->nullable();
+            $table->dateTime('data_inicio');
+            $table->dateTime('data_termino')->nullable();
             $table->boolean('dia_todo')->nullable();
             $table->text('descricao')->nullable();
             $table->string('link')->nullable();
