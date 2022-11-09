@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class CategoriasGasto extends Model
+class CategoriaGasto extends Model
 {
     use HasFactory;
     public $timestamps = false;

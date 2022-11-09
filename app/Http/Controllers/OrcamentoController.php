@@ -14,7 +14,7 @@ class OrcamentoController extends Controller
     public function index()
     {
         $orcamento = Orcamento::get();
-
+        
         return new OrcamentoResource($orcamento);
 
     }
@@ -31,6 +31,7 @@ class OrcamentoController extends Controller
 
     public function show(Orcamento $orcamento)
     {       
+        
             return new OrcamentoResource($orcamento);                     
     }
 
@@ -39,7 +40,7 @@ class OrcamentoController extends Controller
         $input = $request->validated();        
 
         $orcamento->update($input);
-
+        
         return new OrcamentoResource($orcamento);   
 
     }

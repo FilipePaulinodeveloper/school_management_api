@@ -2,7 +2,10 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CalendarioController;
+use App\Http\Controllers\CategoriaGastoController;
+use App\Http\Controllers\GastosController;
 use App\Http\Controllers\OrcamentoController;
+use App\Models\CategoriaGasto;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -26,6 +29,12 @@ Route::apiResource('calendario', CalendarioController::class);
 
 // Orcamento 
 Route::apiResource('orcamento', OrcamentoController::class);
+
+//Gastos
+Route::apiResource('gasto', GastosController::class);
+
+// CategoriaGasto
+Route::apiResource('categoriagasto', CategoriaGastoController::class);
 
 
 
