@@ -20,7 +20,7 @@ class CalendarioEventoFactory extends Factory
     public function definition()
     {
         return [
-            'titulo_envento' => fake()->title(),
+            'titulo_evento' => fake()->title(),
             'categoria' => $this->faker->lexify(1),
             'data_inicio' => fake()->date(),
             'data_termino' => fake()->date(),

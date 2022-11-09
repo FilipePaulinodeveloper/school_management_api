@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('calendario_eventos', function (Blueprint $table ){
             $table->id();
-            $table->string('titulo_envento', 45);
+            $table->string('titulo_evento', 45);
             $table->string('categoria', 1);
             $table->dateTime('data_inicio');
             $table->dateTime('data_termino')->nullable();
