@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CalendarioController;
 use App\Http\Controllers\CategoriaGastoController;
+use App\Http\Controllers\CursoController;
 use App\Http\Controllers\GastosController;
 use App\Http\Controllers\OrcamentoController;
 use App\Models\CategoriaGasto;
@@ -35,6 +36,11 @@ Route::apiResource('gasto', GastosController::class);
 
 // CategoriaGasto
 Route::apiResource('categoriagasto', CategoriaGastoController::class);
+
+//Curso
+Route::apiResource('curso', CursoController::class);
+
+
 
 
 
