@@ -20,10 +20,11 @@ class CalendarioController extends Controller
     }
 
     public function index () 
-    {              
-        $calendario = $this->calendario->paginate('10'); 
-        return response()->json($calendario, 200);    
-      
+    {                   
+        $calendario = CalendarioEvento::get();
+
+        return new CalendarioResource($calendario);  
+        
     }
 
     public function store (CalendarioRequest $request, CalendarioEvento $calendario)
@@ -38,10 +39,8 @@ class CalendarioController extends Controller
         
     }
 
-    public function show(CalendarioRequest $request, CalendarioEvento $calendario)
-    {
-        $input = $request->validated();
-      
+    public function show(CalendarioEvento $calendario)
+    {        
         return new CalendarioResource($calendario);
     }
 

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CalendarioController;
+use App\Http\Controllers\OrcamentoController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -22,6 +23,10 @@ Route::post('register', [AuthController::class,'register']);
 
 // Calendario
 Route::apiResource('calendario', CalendarioController::class);
+
+// Orcamento 
+Route::apiResource('orcamento', OrcamentoController::class);
+
 
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {

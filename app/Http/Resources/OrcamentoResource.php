@@ -2,10 +2,9 @@
 
 namespace App\Http\Resources;
 
-use DateTime;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class CalendarioResource extends JsonResource
+class OrcamentoResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -14,7 +13,7 @@ class CalendarioResource extends JsonResource
      * @return array|\Illuminate\Contracts\Support\Arrayable|\JsonSerializable
      */
     public function toArray($request)
-    {    
-        return parent::toArray($request);        
+    {
+        return parent::toArray($request);
     }
 }
