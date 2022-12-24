@@ -17,7 +17,8 @@ class CategoriaGasto extends Model
 
     public function gastos()
     {
-        return $this->hasMany(Gastos::class);
+        // return $this->hasMany(Gastos::class);
+        return $this->belongsToMany(Gastos::class);
     }
     public function subcategoria()
     {

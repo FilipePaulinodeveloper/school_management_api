@@ -19,9 +19,10 @@ class Gasto extends Model
         'ano',       
     ];
 
-    public function categoria()
+    public function categorias()
     {
-        return $this->hasMany(CategoriasGasto::class);
+        // return $this->hasMany(CategoriasGasto::class);
+        return $this->belongsToMany(CategoriasGasto::class);
     }  
 
 }
