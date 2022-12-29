@@ -26,10 +26,10 @@ class CalendarioRequest extends FormRequest
         return [
         'titulo_evento' => 'required|string|max:45',
         'categoria' => 'required|string|max:1',
-        'data_inicio' => 'nullable|date_format:Y-m-d H:i:s',
+        'data_inicio' => 'required|date_format:Y-m-d H:i:s',
         'data_termino' => 'nullable|date',
         'dia_todo' => 'nullable|Boolean',
-        'descricao' => 'nullable|Text',
+        'descricao' => 'nullable|string', 
         'link' => 'nullable|string|max:255'
         ];
     }

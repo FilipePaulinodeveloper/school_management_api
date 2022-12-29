@@ -9,7 +9,7 @@ class CalendarioEvento extends Model
 {
     use HasFactory;
     public $timestamps = false;
-    protected $table = 'calendario_eventos';
+    // protected $table = 'calendario_eventos';
 
     protected $fillable = [
         'titulo_evento',

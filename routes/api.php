@@ -26,7 +26,8 @@ Route::post('/login', [AuthController::class,'login']);
 Route::post('register', [AuthController::class,'register']);
 
 // Calendario
-Route::apiResource('calendario', CalendarioController::class);
+   Route::apiResource('calendario', CalendarioController::class);
+// Route::post('store', [CalendarioController::class, 'store']);
 
 // Orcamento 
 Route::apiResource('orcamento', OrcamentoController::class);

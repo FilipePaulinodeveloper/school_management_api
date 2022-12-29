@@ -31,11 +31,11 @@ class CalendarioController extends Controller
     { 
         // $this->authorize('create', CalendarioEvento::class);       
         
-        $input = $request->validated();   
+         $input = $request->validated();           
+        
+         $calendario = CalendarioEvento::create($input);
 
-        $calendario = CalendarioEvento::create($input);
-       
-        return new CalendarioResource($calendario);        
+         return new CalendarioResource($calendario);                    
         
     }
 
@@ -52,14 +52,16 @@ class CalendarioController extends Controller
         $calendario->update($input);                   
 
         return new CalendarioResource($calendario);             
-      
+        
     }
 
     public function destroy(CalendarioEvento $calendario)
     {
+
        $calendario->delete();
 
-       return response()->noContent();
+       return response()->json('Deletado',200);
+
     }
 
     
